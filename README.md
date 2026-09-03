@@ -1,3 +1,5 @@
+Website published
+
 # 圣经之声：GitHub Pages 部署版
 
 这是一个不需要服务器、不需要安装软件的静态音频网站。播放器、手机适配和 GitHub Pages 自动部署已经配置完成。
