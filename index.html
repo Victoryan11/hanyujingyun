@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08111f" />
+    <meta name="description" content="在线聆听《创世记》中文音频。" />
+    <title>圣经之声</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="圣经之声首页">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>圣经之声</span>
+      </a>
+      <a class="nav-link" href="#chapters">全部章节</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <img class="hero-image" id="heroImage" alt="暖光下翻开的圣经" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow" id="heroEyebrow">中文有声圣经 · 创世记</p>
+          <h1 id="page-title">让话语在<br />安静中被听见</h1>
+          <p class="hero-copy" id="heroDescription">从起初的创造开始，聆听信仰、选择与生命的故事。</p>
+          <a class="primary-link" href="#chapters">
+            <span class="small-play" aria-hidden="true">▶</span>
+            开始聆听
+          </a>
+        </div>
+        <p class="hero-verse"><span id="verseText">“起初，神创造天地。”</span> <span id="verseSource">创世记 1:1</span></p>
+      </section>
+
+      <section class="chapters-section" id="chapters" aria-labelledby="chapters-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark">创世记 · 第一卷</p>
+            <h2 id="chapters-title">选择章节</h2>
+          </div>
+          <p>点击图片播放；再次点击即可暂停。</p>
+        </div>
+
+        <div class="chapter-list" id="chapterList"></div>
+      </section>
+
+      <section class="gallery-section" aria-labelledby="gallery-title">
+        <div class="gallery-intro">
+          <p class="eyebrow">阅读 · 聆听 · 默想</p>
+          <h2 id="gallery-title">在日常里，留一段安静的时间</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img id="galleryReading" alt="光线中的圣经书页" loading="lazy" />
+            <figcaption>阅读</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img id="galleryListening" alt="教堂彩色玻璃窗" loading="lazy" />
+            <figcaption>聆听</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img id="galleryMeditation" alt="书本与耳机" loading="lazy" />
+            <figcaption>默想</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>圣经之声</span>
+      <span>愿你在聆听中得着平安</span>
+    </footer>
+
+    <aside class="player" id="player" aria-label="音频播放器" aria-hidden="true">
+      <div class="player-main">
+        <img id="playerCover" alt="" />
+        <button class="player-toggle" id="playerToggle" type="button" aria-label="播放">▶</button>
+        <div class="player-title-wrap">
+          <strong id="playerTitle">尚未选择章节</strong>
+          <span id="playerStatus">创世记</span>
+        </div>
+      </div>
+      <div class="timeline-wrap">
+        <span id="currentTime">0:00</span>
+        <input id="timeline" type="range" min="0" max="100" value="0" aria-label="播放进度" />
+        <span id="duration">0:00</span>
+      </div>
+      <button class="close-player" id="closePlayer" type="button" aria-label="关闭播放器">×</button>
+    </aside>
+
+    <audio id="audio" preload="metadata"></audio>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
